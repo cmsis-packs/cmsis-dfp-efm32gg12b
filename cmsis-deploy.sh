@@ -2,11 +2,11 @@
 
 name=cmsis-dfp-efm32gg12b
 vendor=SiliconLabs
-version=2.7.0
+version=2.7.3
 source_url=https://www.silabs.com/documents/public/cmsis-packs/$vendor.GeckoPlatform_EFM32GG12B_DFP.$version.pack
 
-build_dir=cmsis_build
-deploy_dir=cmsis_deploy
+build_dir='cmsis_build'
+deploy_dir='cmsis_deploy'
 
 prepare() {
     echo "preparing..." 
@@ -37,12 +37,6 @@ prepare() {
         echo "Running \"rm -rf $deploy_dir/*\""
         rm -rf $deploy_dir/*
     fi
-    
-    if [ -f "$build_dir/version" ]; then
-        echo "File \"$build_dir/version\"  already exists"
-        echo "Running \"rm $build_dir/version\""
-        rm $build_dir/versionname
-    fi
 
     touch $build_dir/version
 
@@ -51,7 +45,7 @@ prepare() {
 
 download() {
     echo "downloading..."
-    curl -o $build_dir/pack-src.pack $source_url
+    curl -L -o $build_dir/pack-src.pack $source_url
 }
 
 extract() {
