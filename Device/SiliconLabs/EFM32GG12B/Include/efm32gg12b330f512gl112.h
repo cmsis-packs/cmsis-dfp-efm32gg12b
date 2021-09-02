@@ -4,7 +4,7 @@
  *        for EFM32GG12B330F512GL112
  *******************************************************************************
  * # License
- * <b>Copyright 2020 Silicon Laboratories Inc. www.silabs.com</b>
+ * <b>Copyright 2021 Silicon Laboratories Inc. www.silabs.com</b>
  *******************************************************************************
  *
  * SPDX-License-Identifier: Zlib
@@ -9280,4 +9280,5 @@ typedef struct {
 #ifdef __cplusplus
 }
 #endif
+
 #endif /* EFM32GG12B330F512GL112_H */
